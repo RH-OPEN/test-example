@@ -1,0 +1,8 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app.kubernetes.io/component: prod-coffee-shop
+    app.kubernetes.io/instance: prod-coffee-shop
+    app.kubernetes.io/part-of: prod-coffee-shop
+  name: coffee-shop

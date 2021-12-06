@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coffee-shop
+  labels:
+    app.kubernetes.io/component: prod-coffee-shop
+    app.kubernetes.io/instance: prod-coffee-shop
+    app.kubernetes.io/part-of: prod-coffee-shop  
+spec:
+  template:
+    spec:
+      containers:
+      - name: coffee-shop
+        image: quay.io/gpte-devops-automation/coffee-shop
+
