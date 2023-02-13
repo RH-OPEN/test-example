@@ -10,5 +10,5 @@ resources:
 namespace: prod-coffeeshop
 
 patches:
-- path: ./knative-service-patch.yaml
+- ./knative-service-patch.yaml
 
