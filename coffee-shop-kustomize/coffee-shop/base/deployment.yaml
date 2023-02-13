@@ -28,15 +28,7 @@ spec:
             name: coffee-shop
         image: quay.io/gpte-devops-automation/coffee-shop
         imagePullPolicy: IfNotPresent
-        livenessProbe:
-          failureThreshold: 3
-          httpGet:
-            path: /health
-            port: 8080
-            scheme: HTTP
-          periodSeconds: 10
-          successThreshold: 1
-          timeoutSeconds: 1
+        
         name: coffee-shop
         ports:
         - containerPort: 8443
@@ -45,15 +37,6 @@ spec:
           protocol: TCP
         - containerPort: 8080
           protocol: TCP
-        readinessProbe:
-          failureThreshold: 3
-          httpGet:
-            path: /health
-            port: 8080
-            scheme: HTTP
-          periodSeconds: 10
-          successThreshold: 1
-          timeoutSeconds: 1
         resources:
           requests:
             cpu: 100m
