@@ -4,11 +4,11 @@ kind: Kustomization
 
 namePrefix: prod-
 
-bases:
+resources:
 - ../../base
 
 namespace: prod-coffeeshop
 
 patches:
-- ./knative-service-patch.yaml
+- path: ./knative-service-patch.yaml
 

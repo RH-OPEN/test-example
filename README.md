@@ -1,1 +1,1 @@
-# example
+# Kustomization Example

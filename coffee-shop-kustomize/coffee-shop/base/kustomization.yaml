@@ -1,4 +1,3 @@
----
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
@@ -8,5 +7,7 @@ resources:
 - ./service.yaml
 - ./route.yaml
 
-commonLabels:
-  app: prod-coffee-shop
+labels:
+- includeSelectors: true
+  pairs:
+    app: prod-coffee-shop
